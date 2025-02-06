@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>pal~pals</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="page__posts">
+    <div class="posts">
+      <div class="navbar">
+        <a href="/">home</a>
+        <a href="/portfolio.html">portfolio</a>
+        <a href="/about.html">about</a>
+        <a href="/posts.html" class="selected">posts</a>
+        <a href="/contact.html">contact</a>
+      </div>
+      <h1>our newest releases and news!!!</h1>
+      <div id="posts-container"></div>
+
+      <script>
+        fetch("posts.json")
+          .then((response) => response.json())
+          .then((posts) => {
+            const container = document.getElementById("posts-container");
+            posts.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+            posts.forEach((post) => {
+              const postElement = document.createElement("div");
+              postElement.classList.add("post");
+              postElement.style.backgroundImage = `url(${post.bg_img})`;
+              postElement.innerHTML = `
+                        <h2><a href="${post.link}">${post.title}</a></h2>
+                        <p>${post.date}</p>
+                        <p>${post.desc}</p>
+                        <img src="${post.image}" width="100" height="100"/>
+                    `;
+              container.appendChild(postElement);
+            });
+          });
+      </script>
+    </div>
+    <footer>feeter</footer>
+  </body>
+</html>

@@ -24,7 +24,8 @@ div {
 }
 
 .index {
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 1);
+  margin: 0 0;
 }
 
 .navbar {
@@ -81,4 +82,72 @@ h1 {
 
 .post img {
   object-fit: cover;
+}
+
+.infobox {
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.95)),
+    url("images/background.jpg");
+  border-color: #0000006e;
+  border-radius: 8px;
+  border-style: solid;
+  border-width: 2px;
+  margin-right: 0;
+  text-align: center;
+  width: 32rem;
+}
+
+.infobox li {
+  text-align: left;
+  width: 24rem;
+  margin: auto;
+}
+
+#info_and_post {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  justify-content: center;
+}
+
+#highlighted_post {
+  background-color: #000;
+  height: 24rem;
+  width: 40rem;
+  margin: 0 0;
+  overflow: hidden;
+  position: relative;
+  border-color: #0000006e;
+  border-radius: 8px;
+  border-style: solid;
+  border-width: 2px;
+  background-position: center;
+  background-size: auto;
+  background-repeat: repeat;
+}
+
+.right {
+  width: 44rem;
+  margin-left: 0;
+  padding: 0 0;
+  padding-top: 2rem;
+}
+
+.right p {
+  font-size: large;
+  width: 24rem;
+  text-align: center;
+  margin: auto;
+  margin-top: 1rem;
+}
+
+#contact {
+  border-color: #0000006e;
+  border-radius: 8px;
+  border-style: solid;
+  border-width: 2px;
+  border-style: solid;
+  width: 100%;
+  margin: 0 0;
+  padding: 0 0;
+  padding-bottom: 2rem;
 }

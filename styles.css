@@ -20,7 +20,7 @@ div {
   text-shadow: 0px 0px 15rem #000, 0px 0px 8rem #000, 0px 0px 1rem #fff;
   font-size: 15rem;
   margin: 8rem 0rem 20rem 0rem;
-  padding: 0rem 0rem;
+  padding: 0 0;
 }
 
 .index {

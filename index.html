@@ -16,38 +16,69 @@
         <a href="/posts.html">posts</a>
         <a href="/contact.html">contact</a>
       </div>
-      <!--<div class="featured">
-        <iframe
-          width="1000"
-          height="500"
-          src="https://www.youtube.com/embed/videoseries?si=c6PHs32nvKVl0qAp&amp;controls=0&amp;list=PLEvKVIrWAL5p2HUgbFj-ErcxTXgRjucOO"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen
-        ></iframe>
+      <div id="info_and_post">
+        <div class="infobox">
+          <h1>pal~pals</h1>
+          <h2>a small brief</h2>
+          <p>we are a music producer duo!!</p>
+          <p>
+            you probably stumbled upon our unusual little page from our various
+            posts on social media - thanks for checking us out!
+          </p>
+          <p>
+            we specialize in a lot of genres and styles - both of us have been
+            doing this kind of audio work for over eight years now, honing in on
+            sound design and unique song structure, arrangements, and
+            exploration of styles and themes
+          </p>
+          <p>whatever it is you want us to work on - here are our promises:</p>
+          <ul>
+            <li>our execution will bring style</li>
+            <li>quality is guaranteed - no matter your funds</li>
+            <li>we hear, we judge, we help, and we collaborate</li>
+            <li>the human touch is NEVER missing</li>
+            <li>we will see it through until the end</li>
+          </ul>
+          <p>terms and conditions apply &reg;</p>
+          <p>
+            if you are interested, keep browsing the site! to the right of this
+            you will see our latest post - start going down the rabbit hole,
+            it's worth it
+          </p>
+        </div>
+        <div class="right">
+          <h1>check out our latest work!!</h1>
+          <div id="highlighted_post"></div>
+          <p>
+            you can view all our music in the portfolio page, or news in the
+            posts tab
+          </p>
+          <script>
+            fetch("posts.json")
+              .then((response) => response.json())
+              .then((posts) => {
+                const container = document.getElementById("highlighted_post");
+                const post = posts.sort(
+                  (a, b) => new Date(b.date) - new Date(a.date)
+                )[0];
+
+                container.style.backgroundImage = `url(${post.bg_img})`;
+                container.innerHTML = `
+                          <h2><a href="${post.link}">${post.title}</a></h2>
+                          <p>${post.date}</p>
+                          <p>${post.desc}</p>
+                          <img src="${post.image}" width="100" height="100"/>
+                      `;
+                container.appendChild(postElement);
+              });
+          </script>
+        </div>
       </div>
-      <div class="recent_posts">here i have to add a carousel</div> !-->
-      <div class="introduction">
-        <h1>pal~pals</h1>
-        <p>
-          we are a music producer duo!! we've been making music for over 8 years
-          now, and we have experience in a lot of genres - find our contact
-          email below if you are looking to work with us
-        </p>
-      </div>
-      <div class="contact">
-        <h1>contact</h1>
-        <p>wanna work with us?</p>
+      <div class="infobox" id="contact">
+        <h1>contact us</h1>
+        <p>want us to make music for your next game?</p>
         <address>palpalsworks@gmail.com</address>
-        <p>you know what to do</p>
-        <p>
-          alternatively - check out the faq for more details, like what genres
-          we work with and all that jazz - i trust you're not new to this
-        </p>
       </div>
     </div>
-    <footer>feeter</footer>
   </body>
 </html>

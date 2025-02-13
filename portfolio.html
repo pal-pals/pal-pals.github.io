@@ -6,103 +6,42 @@
     <title>pal~pals</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
-    <div class="page__index">
-      <div class="page__navbar">
-        <a href="/" class="navbar__link">Home</a>
-        <a href="/portfolio.html" class="navbar__link">Portfolio</a>
-        <!-- <a href="/about.html" class="navbar__link">About</a>
-        <a href="/faq.html" class="navbar__link">FAQ</a> -->
-        <a href="/contact.html" class="navbar__link">Contact</a>
+  <body class="page__portfolio">
+    <div class="portfolio">
+      <div class="navbar">
+        <a href="/">home</a>
+        <a href="/portfolio.html" class="selected">portfolio</a>
+        <a href="/about.html">about</a>
+        <a href="/posts.html">posts</a>
+        <a href="/contact.html">contact</a>
       </div>
-      <div class="index__introduction">
-        <h1>portfolio</h1>
-        <div class="portfolio">
-          <div class="music__block">
-            <h2>Chipped prologue - music</h2>
-            <iframe
-              width="100%"
-              height="450"
-              scrolling="no"
-              frameborder="no"
-              allow="autoplay"
-              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1954365575&color=%230a070b&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
-            ></iframe>
-            <div
-              style="
-                font-size: 10px;
-                color: #cccccc;
-                line-break: anywhere;
-                word-break: normal;
-                overflow: hidden;
-                white-space: nowrap;
-                text-overflow: ellipsis;
-                font-family: Interstate, Lucida Grande, Lucida Sans Unicode,
-                  Lucida Sans, Garuda, Verdana, Tahoma, sans-serif;
-                font-weight: 100;
-              "
-            >
-              <a
-                href="https://soundcloud.com/demon_and_max"
-                title="DEMON AND MAX"
-                target="_blank"
-                style="color: #cccccc; text-decoration: none"
-                >DEMON AND MAX</a
-              >
-              ·
-              <a
-                href="https://soundcloud.com/demon_and_max/sets/ch0"
-                title="_ch0"
-                target="_blank"
-                style="color: #cccccc; text-decoration: none"
-                >_ch0</a
-              >
-            </div>
-          </div>
-          <div class="music__block">
-            <h2>Aylyth - music and sound</h2>
-            <iframe
-              width="100%"
-              height="450"
-              scrolling="no"
-              frameborder="no"
-              allow="autoplay"
-              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1732773549&color=%230a070b&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
-            ></iframe>
-            <div
-              style="
-                font-size: 10px;
-                color: #cccccc;
-                line-break: anywhere;
-                word-break: normal;
-                overflow: hidden;
-                white-space: nowrap;
-                text-overflow: ellipsis;
-                font-family: Interstate, Lucida Grande, Lucida Sans Unicode,
-                  Lucida Sans, Garuda, Verdana, Tahoma, sans-serif;
-                font-weight: 100;
-              "
-            >
-              <a
-                href="https://soundcloud.com/demon_and_max"
-                title="DEMON AND MAX"
-                target="_blank"
-                style="color: #cccccc; text-decoration: none"
-                >DEMON AND MAX</a
-              >
-              ·
-              <a
-                href="https://soundcloud.com/demon_and_max/sets/ympe"
-                title="Ympe"
-                target="_blank"
-                style="color: #cccccc; text-decoration: none"
-                >Ympe</a
-              >
-            </div>
-          </div>
-        </div>
-      </div>
+      <div id="projects"></div>
+      <script>
+        fetch("portfolio.json")
+          .then((response) => response.json())
+          .then((projects) => {
+            const container = document.getElementById("projects");
+            //projects.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+            projects.forEach((element) => {
+              const postElement = document.createElement("div");
+              postElement.classList.add("project");
+              postElement.style.backgroundImage = `url(${element.bg_img})`;
+              postElement.innerHTML = `
+                <div class="left">
+                  <h2><a href="${element.post_link}">${element.title}</a></h2>
+                  <p>${element.subtitle}</p>
+                  <p>${element.description}</p>
+                  <p>${element.audio_description}</p>
+                </div>
+                <div class="right">
+                  <img src="${element.image}" width="180" height="180"/>
+                </div>
+                `;
+              container.prepend(postElement);
+            });
+          });
+      </script>
     </div>
-    <!-- <footer>hello i am under the water</footer> -->
   </body>
 </html>

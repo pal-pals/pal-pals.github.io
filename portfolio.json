@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "type": "Music",
+    "title": "Waffles Kitchen",
+    "date": "2022-00-00",
+    "subtitle": "Music for Waffle's Kitchen cooking game demo.",
+    "description": "",
+    "audio_description": "",
+    "post_link": "https://kidkidgaming.itch.io/waffles-kitchen-demo",
+    "image": "https://img.itch.zone/aW1nLzE2OTI3MjQxLnBuZw==/347x500/e8jBXG.png",
+    "bg_img": "images/background.jpg"
+  },
+  {
+    "id": 2,
+    "type": "Music and Sound",
+    "title": "Aylyth",
+    "date": "2023-06-06",
+    "subtitle": "Music and sounds for the Minecraft Aylyth mod.",
+    "description": "The Aylyth mod adds a new dimension - a neverending forest, nobody knows what it truly hides behind the fog. What is known is that the roots of the trees dig deeper than the slate, and they dig even within your very soul.",
+    "audio_description": "This soundtrack heavily focuses on calm, alluring soundscapes. They entice the player to be curious - yet the unease persists, no matter where you go.",
+    "post_link": "https://youtube.com/playlist?list=PLEvKVIrWAL5p2HUgbFj-ErcxTXgRjucOO&si=oJ_vqglUpdWXX5t6",
+    "image": "https://public-files.gumroad.com/femqhe0gixneq2cx5gwg88dukb5p",
+    "bg_img": "https://public-files.gumroad.com/k9j8qemicmbskdkyyzrg3bmolwdg"
+  },
+  {
+    "id": 3,
+    "type": "Music",
+    "title": "Chipped (prelude)",
+    "date": "2024-01-01",
+    "subtitle": "Music for the Chipped horror game prelude.",
+    "description": "You wake up in an unfamiliar laboratory, only to be consulted that you had a chip implanted in your brain to allow you to control the SynthPal - a massive robot meant for helping humans carry out difficult tasks... But it seems something went wrong with their newest model.",
+    "audio_description": "The focus of this soundtrack was on heavy foley and noise.",
+    "post_link": "https://t3rrifk.itch.io/chipped-prologue",
+    "image": "https://img.itch.zone/aW1nLzE4NTEwMTg5LmdpZg==/original/mTFkw%2F.gif",
+    "bg_img": "https://img.itch.zone/aW1hZ2UvMzA4ODYwMS8xODQ5MTc1MS5naWY=/347x500/PochGY.gif"
+  },
+  {
+    "id": 4,
+    "type": "Music",
+    "title": "Turn the TV Off",
+    "date": "2024-02-01",
+    "subtitle": "Music for Turn the TV Off horror game.",
+    "description": "You think the stories about the Boogeyman are not real. Oh how wrong you were...",
+    "audio_description": "The soundtrack consists of remixed Kendrick Lamar music - a heavy accent was put on copyright safety for streamers and Youtubers.",
+    "post_link": "https://t3rrifk.itch.io/turn-the-tv-off",
+    "image": "https://img.itch.zone/aW1nLzE5ODA1MTczLmdpZg==/508x254%23mbm/ix3HAV.gif",
+    "bg_img": "https://img.itch.zone/aW1nLzE5ODA1NDUxLmdpZg==/original/6zq6EL.gif"
+  }
+]

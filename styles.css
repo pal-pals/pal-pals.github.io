@@ -151,3 +151,59 @@ h1 {
   padding: 0 0;
   padding-bottom: 2rem;
 }
+
+.page__portfolio {
+  background-image: none;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)),
+    url("images/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.portfolio {
+  background-color: #000;
+  width: 100%;
+  margin: 0 0;
+  margin-top: 4rem;
+  padding: 0 0;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.project {
+  width: 100%;
+  margin: 0 0;
+  padding: 0 0;
+  display: flex;
+  flex-direction: row;
+  background-position: center;
+  background-size: cover;
+  background-repeat: repeat-y;
+  padding-bottom: 0.5rem;
+  padding-top: 0.5rem;
+}
+
+.project .right {
+  padding: 0.2rem 0.2rem;
+  margin: 0 0;
+  width: 30%;
+  background: none;
+  align-content: center;
+}
+
+.project .left {
+  padding: 0.2rem 0.2rem;
+  margin: 0 0;
+  margin-right: 0.5rem;
+  background: none;
+  width: 70%;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+
+.project .left p {
+  width: 32rem;
+  margin: auto;
+  margin-top: 1rem;
+}
